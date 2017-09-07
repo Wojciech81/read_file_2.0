@@ -1,0 +1,20 @@
+import re
+import csv
+
+myfile= open("C:/Users/Internet/Desktop/my_docs/lista pozycji.txt")
+
+
+mylist=list()
+for line in myfile:
+      line = line.rstrip()
+      line=re.findall('[0-9]+', line)
+      if len(line)>0:
+                  #print (lines)
+
+                  for x in line:
+                        if x in line:
+                              mylist.append(int(x))
+
+with open('lista_pozycji1.csv', 'w',newline="" ) as file:
+    for item in mylist:
+        csv.writer(file).writerow([int(item)])
