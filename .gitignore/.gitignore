@@ -16,5 +16,6 @@ for line in myfile:
                               mylist.append(int(x))
 
 with open('lista_pozycji1.csv', 'w',newline="" ) as file:
-    for item in mylist:
-        csv.writer(file).writerow([int(item)])
+      csv.writer(file).writerow(['lista'])
+      for item in mylist:
+            csv.writer(file).writerow([int(item)])
